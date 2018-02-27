@@ -1,0 +1,20 @@
+* {
+    background-color: yellow;
+}
+
+.wrapper {
+    margin: 2em auto;
+    max-width: 800px;
+}
+
+.winning-photo {
+    background-color: blue;
+    width: 50%;
+    position: absolute;
+}
+
+.game-board {
+    background-color: red;
+    width: 50%;
+    position: relative;
+}
