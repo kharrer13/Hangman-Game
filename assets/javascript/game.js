@@ -10,18 +10,18 @@ var images = {"milhouse": "milhouse.png" ,
     "preofessor frink" : "frink.png", 
     "comic book guy" :"comic.jpg", 
     "krusty the clown" : "krusty.jpg" , 
-    "barney gumble" :, 
+    "barney gumble" : "barney.jpg", 
     "marge simpson" : "Marge.jpg", 
     "lisa simpson" : "Lisa.jpg", 
-    "abe simpson" :, 
-    "chief wiggum" :, 
-    "ned flanders" :, 
-    "sideshow bob" :, 
-    "ralph wiggum" ;, 
-    "moe szyslak" :, 
-    "groundskeeper willie" :, 
-    "mr burns" :, 
-    "bart simpson" ; "bart.jpg", 
+    "abe simpson" : "abe" , 
+    "chief wiggum" : 'wiggum.jpg' , 
+    "ned flanders" : 'ned.jpg' , 
+    "sideshow bob" : 'bob.png' , 
+    "ralph wiggum" : 'ralph.jpg', 
+    "moe szyslak" : 'moe.jpg' , 
+    "groundskeeper willie" : 'willie.jpg' , 
+    "mr burns" : 'burns.png' , 
+    "bart simpson" : "bart.jpg", 
     "homer simpson" : "homer.jpg"};
 var gameAnswer = [];
 var answerBlank = [];
@@ -45,6 +45,8 @@ document.onkeyup = function(event) {
     
         // Randomly chooses a name from the characters array. This is the games' word.
         gameAnswer = characters[Math.floor(Math.random() * characters.length)].split("");
+
+        document.getElementById("winning-char").src = "./assets/images/all_the_simpsons.jpg"
 
         // Create array of -s to represent the word, skipping spaces
         for (let i = 0; i < gameAnswer.length; i++) {
@@ -87,6 +89,7 @@ document.onkeyup = function(event) {
                 alert("YOU WIN");
                 wins++;
                 winsTot.textContent = wins;
+                document.getElementById("winning-char").src = "./assets/images/" + images[gameAnswer.join("")];
                 reset();
             }
         

@@ -7,7 +7,7 @@
     margin: 2em auto;
     max-width: 800px;
     height: auto;
-    border: solid black 2px;
+    /* border: solid black 2px; */
 }
 
 #logo {
@@ -15,24 +15,24 @@
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-    border: solid red 3px;
+    /* border: solid red 3px; */
 }
 
 .winning-photo {
     width: 49%;
     height: 100%;
     float: left;
-    border: black dotted 2px;
+    /* border: black dotted 2px; */
     align-content: center;
 }
 
 #winning-char {
-    max-width: 200px;
+    max-width: 350px;
 }
 
 .game-board {
     width: 49%;
     position: ;
     float: right;
-    border: black dotted 2px;
+    /* border: black dotted 2px; */
 }
