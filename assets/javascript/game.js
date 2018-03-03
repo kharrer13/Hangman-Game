@@ -1,4 +1,28 @@
-var characters = ["milhouse", "dr nick riviera", "nelson muntz", "lenny leonard", "principal skinner", "otto man", "apu nahasapeemapetilon", "maggie simpson", "preofessor frink", "comic book guy", "krusty the clown", "barney gumble", "marge simpson", "lisa simpson", "abe simpson", "chief wiggum", "ned flanders", "sideshow bog", "ralph wiggum", "moe szyslak", "groundskeeper willie", "mr burns", "bart simpson", "homer simpson"];
+var characters = ["milhouse", "dr nick riviera", "nelson muntz", "lenny leonard", "principal skinner", "otto man", "apu nahasapeemapetilon", "maggie simpson", "preofessor frink", "comic book guy", "krusty the clown", "barney gumble", "marge simpson", "lisa simpson", "abe simpson", "chief wiggum", "ned flanders", "sideshow bob", "ralph wiggum", "moe szyslak", "groundskeeper willie", "mr burns", "bart simpson", "homer simpson"];
+var images = {"milhouse": "milhouse.png" ,
+    "dr nick riviera" : "dr nick.jpg", 
+    "nelson muntz" : "nelson.png" , 
+    "lenny leonard" : "lenny.jpg" , 
+    "principal skinner" : "skinner.jpg" , 
+    "otto man" : "otto.jpg" , 
+    "apu nahasapeemapetilon" : "Apu.jpg" , 
+    "maggie simpson" : "maggie.jpg" , 
+    "preofessor frink" : "frink.png", 
+    "comic book guy" :"comic.jpg", 
+    "krusty the clown" : "krusty.jpg" , 
+    "barney gumble" :, 
+    "marge simpson" : "Marge.jpg", 
+    "lisa simpson" : "Lisa.jpg", 
+    "abe simpson" :, 
+    "chief wiggum" :, 
+    "ned flanders" :, 
+    "sideshow bob" :, 
+    "ralph wiggum" ;, 
+    "moe szyslak" :, 
+    "groundskeeper willie" :, 
+    "mr burns" :, 
+    "bart simpson" ; "bart.jpg", 
+    "homer simpson" : "homer.jpg"};
 var gameAnswer = [];
 var answerBlank = [];
 var guessedLetters = [];
@@ -12,6 +36,7 @@ var lossTot = document.getElementById("losses");
 var curentWord = document.getElementById("current-word");
 var guesses = document.getElementById("guesses");
 var guessed = document.getElementById("guessed");
+var image = document.getElementById("winning-char");
 
 document.onkeyup = function(event) {
 
@@ -32,6 +57,7 @@ document.onkeyup = function(event) {
 
         curentWord.textContent = answerBlank.join("");
         guesses.textContent = remaining;
+        guessed.textContent = guessedLetters;
 
         // Set playing value equal to true
         playing = true;
@@ -61,7 +87,7 @@ document.onkeyup = function(event) {
                 alert("YOU WIN");
                 wins++;
                 winsTot.textContent = wins;
-                playing = false;
+                reset();
             }
         
         } else {
@@ -73,12 +99,24 @@ document.onkeyup = function(event) {
 
             // If out of guesses, the player lost
              if (remaining == 0) {
+                alert("You Lost :( ")
                 losses++;
         
                 curentWord.textContent = gameAnswer.join("");
                 lossTot.textContent = losses;
-                playing = false;
+                reset();
             }
         }
     }
+}
+
+function reset() {
+    playing = false;
+    answerBlank = [];
+    guessedLetters = []
+    remaining = 12;
+}
+
+function showPicture() {
+
 }

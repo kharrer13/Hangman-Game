@@ -9,18 +9,22 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="winning-photo">
-        </div>
-        <div class="game-board">
-            <p>Press Spacebar to Play!</p>
-            <p>Wins   : <span id="wins">0</span></p>
-            <p>Losses : <span id="losses">0</span></p>
-            <p>Current word/phrase: </p>
-            <p><span id="current-word"> </span></p>
-            <p>Number of guesses remaining: <span id="guesses">12</span></p>
-            <p>Letters already guessed: </p>
-            <p><span id="guessed"> </span></p>
-        </div>
+        <div id="logo"><img src="./assets/images/simpsons.jpeg" alt="Simpsons logo"></div>
+        <section id="main">
+            <div class="winning-photo">
+                <img id="winning-char" src="./assets/images/all_the_simpsons.jpg" alt="All the characters!">
+            </div>
+            <div class="game-board">
+                <h1>Press Spacebar to Play New Game!</h1>
+                <p>Wins   : <span id="wins">0</span></p>
+                <p>Losses : <span id="losses">0</span></p>
+                <p>Current word/phrase: </p>
+                <h2><span id="current-word"> </span></h2>
+                <p>Number of guesses remaining: <span id="guesses">12</span></p>
+                <p>Letters already guessed: </p>
+                <p><span id="guessed"> </span></p>
+            </div>
+        </section>
     </div>
     <script src="./assets/javascript/game.js"></script>    
 </body>
