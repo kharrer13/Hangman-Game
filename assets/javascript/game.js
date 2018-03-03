@@ -1,4 +1,4 @@
-var characters = ["milhouse", "dr nick riviera", "nelson muntz", "lenny leonard", "principal skinner", "otto man", "apu nahasapeemapetilon", "maggie simpson", "preofessor frink", "comic book guy", "krusty the clown", "barney gumble", "marge simpson", "lisa simpson", "abe simpson", "chief wiggum", "ned flanders", "sideshow bob", "ralph wiggum", "moe szyslak", "groundskeeper willie", "mr burns", "bart simpson", "homer simpson"];
+var characters = ["milhouse", "dr nick riviera", "nelson muntz", "lenny leonard", "principal skinner", "otto man", "apu nahasapeemapetilon", "maggie simpson", "professor frink", "comic book guy", "krusty the clown", "barney gumble", "marge simpson", "lisa simpson", "abe simpson", "chief wiggum", "ned flanders", "sideshow bob", "ralph wiggum", "moe szyslak", "groundskeeper willie", "mr burns", "bart simpson", "homer simpson"];
 var images = {"milhouse": "milhouse.png" ,
     "dr nick riviera" : "dr nick.jpg", 
     "nelson muntz" : "nelson.png" , 
@@ -7,7 +7,7 @@ var images = {"milhouse": "milhouse.png" ,
     "otto man" : "otto.jpg" , 
     "apu nahasapeemapetilon" : "Apu.jpg" , 
     "maggie simpson" : "maggie.jpg" , 
-    "preofessor frink" : "frink.png", 
+    "professor frink" : "frink.png", 
     "comic book guy" :"comic.jpg", 
     "krusty the clown" : "krusty.jpg" , 
     "barney gumble" : "barney.jpg", 
