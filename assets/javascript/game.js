@@ -1,4 +1,7 @@
-var characters = ["milhouse", "dr nick riviera", "nelson muntz", "lenny leonard", "principal skinner", "otto man", "apu nahasapeemapetilon", "maggie simpson", "professor frink", "comic book guy", "krusty the clown", "barney gumble", "marge simpson", "lisa simpson", "abe simpson", "chief wiggum", "ned flanders", "sideshow bob", "ralph wiggum", "moe szyslak", "groundskeeper willie", "mr burns", "bart simpson", "homer simpson"];
+var characters = ["milhouse", "dr nick riviera", "nelson muntz", "lenny leonard", "principal skinner", "otto man", 
+"apu nahasapeemapetilon", "maggie simpson", "professor frink", "comic book guy", "krusty the clown", "barney gumble", 
+"marge simpson", "lisa simpson", "abe simpson", "chief wiggum", "ned flanders", "sideshow bob", "ralph wiggum", "moe szyslak", 
+"groundskeeper willie", "mr burns", "bart simpson", "homer simpson"];
 var images = {"milhouse": "milhouse.png" ,
     "dr nick riviera" : "dr nick.jpg", 
     "nelson muntz" : "nelson.png" , 
@@ -46,11 +49,12 @@ document.onkeyup = function(event) {
         // Randomly chooses a name from the characters array. This is the games' word.
         gameAnswer = characters[Math.floor(Math.random() * characters.length)].split("");
 
+        // Resets the winning picture to the entire character pic
         document.getElementById("winning-char").src = "./assets/images/all_the_simpsons.jpg"
 
         // Create array of -s to represent the word, skipping spaces
         for (let i = 0; i < gameAnswer.length; i++) {
-            if (gameAnswer[i] == " ") {
+            if (gameAnswer[i] === " ") {
                 answerBlank.push(" ");
             } else {
                 answerBlank.push("-");
@@ -80,12 +84,13 @@ document.onkeyup = function(event) {
                 }
             }
 
+            // Display guessed letters, filled in letters, and updated guesses remaining
             curentWord.textContent = answerBlank.join("");
             guessed.textContent = guessedLetters.join(' ');
             guesses.textContent = remaining;
 
             // Check to see if player won
-            if (gameAnswer.join("") == answerBlank.join("")) {
+            if (gameAnswer.toUpperCase().join("") == answerBlank.toUpperCase().join("")) {
                 alert("YOU WIN");
                 wins++;
                 winsTot.textContent = wins;
@@ -118,8 +123,4 @@ function reset() {
     answerBlank = [];
     guessedLetters = []
     remaining = 12;
-}
-
-function showPicture() {
-
 }
