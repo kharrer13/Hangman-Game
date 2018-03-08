@@ -7,3 +7,9 @@ Once the game has started, you will see the word or words shown as dashes. You c
 If you reach a game end condition (guessing the word correctly or running out of guesses) the round is over. A win or loss will be recorded.
 
 Each game starts with 12 wrong guesses. If you produce the correct answer the image on the page will chage to match the character.
+
+To-Dos
+
+- [x] Make winning character photo appear
+- [ ] Add function to change upper case letters to lower on input
+- [ ] Work on CSS to improve the overall layout of the page
